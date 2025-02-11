@@ -1,0 +1,33 @@
+/* For Firefox: Hide scrollbar by default*/
+.scrollbar-thin {
+  scrollbar-width: none;                /* Hide scrollbar */
+  scrollbar-color: transparent transparent; /* Hide thumb and track colors */
+  overflow-y: overlay;                  /* Optional: allow overlay scrolling */
+}
+
+/* For Firefox: Show thin scrollbar on hover */
+.scrollbar-thin:hover {
+  scrollbar-width: thin;               /* Show thin scrollbar */
+  scrollbar-color: rgba(255,255,255,0.5) #27272a; /* Thumb and track colors */
+}
+
+/* For WebKit browsers (Chrome, Safari): Hide scrollbar by default */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* For WebKit: Show scrollbar on hover */
+.scrollbar-thin:hover::-webkit-scrollbar {
+  width: 0px; /* Adjust thickness as desired */
+  height: 0px;
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-track {
+  background: #27272a; /* Track color */
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Thumb color */
+  border-radius: 9999px;
+}
